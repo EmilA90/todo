@@ -3,11 +3,13 @@ const btn = document.querySelector('#btn');
 
 //ADD INPUT WITH BTN and remove
 btn.addEventListener('click', () => {
+     
     const input = document.querySelector('#input-text').value;
     const ul = document.querySelector('#ul')
     const li = document.createElement('li')
+    if (input == ''){window.alert('Bos deyer!')} else {
     li.innerHTML = `<div class="input-value">${input}</div> <div class="div-img"><img id="close-white" src="close-white.svg" alt="close"></div>`
-    ul.appendChild(li)
+    ul.appendChild(li)}
 
     document.querySelector('#input-text').value = ''
 
@@ -22,12 +24,14 @@ btn.addEventListener('click', () => {
 //ADD INPUT WITH ENTER KEY and Remove
 
   document.querySelector('#input-text').addEventListener('keyup', (event) => {
+    
     if (event.keyCode === 13) {
       const input = document.querySelector('#input-text').value;
       const ul = document.querySelector('#ul')
       const li = document.createElement('li')
+      if (input == ''){window.alert('Bos deyer!')} else {
       li.innerHTML = `<div class="input-value">${input}</div> <div class="div-img"><img id="close-white" src="close-white.svg" alt="close"></div>`
-      ul.appendChild(li)
+      ul.appendChild(li)}
 
       document.querySelector('#input-text').value = ''
 
